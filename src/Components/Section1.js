@@ -117,7 +117,7 @@ const Section1 = ({ movies, query }) => {
     <div className='section1 ' id='popular'>
       <h1 className='text-center text-white py-2'>Popular Movies For 2023</h1>
       <Container>
-        <Row className='ps-4'>
+        <Row className='center'>
           <Col>
             {renderSlides()}
           </Col>

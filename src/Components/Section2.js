@@ -122,7 +122,7 @@ const Section2 = ({ movies, query }) => {
         <div className='section2 ' id='movies'>
             <h1 className='text-center text-white py-2'> Movies Playing Now</h1>
             <Container>
-                <Row className='ps-4'>
+                <Row className='center'>
                     <Col>
                         {renderSlides()}
                     </Col>
