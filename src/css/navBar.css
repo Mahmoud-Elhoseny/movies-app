@@ -1,0 +1,120 @@
+section {
+  background-image: url("../imgs/background.jpg");
+  min-height: 100vh;
+  background-size: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  min-width: 100%;
+}
+@media (max-width: 576px) {
+  section {
+    background-size: cover;
+    min-height: 35vh;
+  }
+  .sign {
+    padding: 0 !important;
+  }
+}
+
+.textNav {
+  position: absolute;
+  top: 30%;
+  z-index: 99990;
+}
+.textNav h1 span {
+  color: #f4b35d;
+}
+.textNav h2 {
+  padding-left: 10px;
+}
+.hdSpan {
+  border: 1px solid #f4b35d;
+  padding: 3px 9px;
+}
+.hdSpan:hover {
+  border: 1px solid white;
+  color: #f4b35d;
+  transition: 0.3s ease-in-out;
+}
+.textNav button {
+  border: 1px solid #f4b35d;
+  padding: 8px;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+}
+.watch:hover {
+  border: 2px solid white;
+  transition: 0.3s ease-in-out;
+  color: #f4b35d;
+}
+.watch:hover .watchIcon {
+  color: white !important;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #f4b35d !important;
+  transition: 0.3s ease-in-out;
+}
+nav {
+  z-index: 999999;
+}
+.searched-movie {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-top: 6px;
+}
+.offcanvas {
+  background: #1b1b66 !important;
+  position: fixed;
+  width: 150px;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+}
+
+.offcanvas.offcanvas {
+  width: 270px !important;
+  z-index: 999999;
+}
+.offcanvas-header .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.baba {
+  position: relative;
+}
+.overlay-playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+  width: 90%;
+  cursor: pointer;
+  color: #f4b35d;
+}
+
+.deleteIcon {
+  position: relative;
+  left: 195px;
+  z-index: 9999;
+  color: #f4b35d;
+  cursor: pointer;
+}
