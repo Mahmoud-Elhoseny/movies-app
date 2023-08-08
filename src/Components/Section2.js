@@ -52,7 +52,7 @@ const Section2 = ({ movies, query }) => {
                 return movies
             }
         })?.map((mov) => (
-            <Col key={mov.id} xs={12} sm={6} md={6} lg={4} xl={3}>
+            <Col className='center' key={mov.id} xs={12} sm={6} md={6} lg={4} xl={3}>
                 <Card style={{ width: '18rem' }} className='cart mb-3'>
                     <Card.Img variant="top" src={`http://www.themoviedb.org/t/p/w220_and_h330_face${mov.poster_path}`} />
                     <div className='text-center'>
@@ -122,7 +122,7 @@ const Section2 = ({ movies, query }) => {
         <div className='section2 ' id='movies'>
             <h1 className='text-center text-white py-2'> Movies Playing Now</h1>
             <Container>
-                <Row className='center'>
+                <Row>
                     <Col>
                         {renderSlides()}
                     </Col>
