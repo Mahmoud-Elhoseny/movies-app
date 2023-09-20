@@ -15,6 +15,8 @@ function App() {
       setMoviesListed(moviesInList);
     }
   }, [moviesInList])
+
+  
   const [query, setQuery] = useState("")
   const handleChange = (e) => {
     const newQuery = e.target.value
