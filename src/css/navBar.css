@@ -14,12 +14,14 @@ section {
   .sign {
     padding: 0 !important;
   }
+  .textNav{
+    opacity: 0.3;
+  }
 }
 
 .textNav {
   position: absolute;
   top: 30%;
-  z-index: 99990;
 }
 .textNav h1 span {
   color: #f4b35d;

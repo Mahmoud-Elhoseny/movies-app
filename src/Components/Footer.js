@@ -20,7 +20,7 @@ const Footer = () => {
                             <li className='pb-1'><a href="#home" className=' text-white'>Home</a></li>
                             <li className='pb-1'><a href="#movies" className=' text-white'>Movies</a></li>
                             <li className='pb-1'><a href="#popular" className=' text-white'>New & Popular</a></li>
-                            <li><a href="#home" className=' text-white'>My List</a></li>
+                            <li><a href="/home" className=' text-white'>My List</a></li>
                         </ul>
                     </div>
                     <div>

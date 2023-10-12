@@ -1,0 +1,58 @@
+.filmPage{
+    padding: 6px 10px 0px 20px !important;
+    height: 150vh;
+    background: rgb(0, 2, 36);
+    background: linear-gradient(
+      90deg,
+      rgb(33, 37, 115) 0%,
+      rgb(27, 116, 158) 46%,
+      rgb(32, 35, 115) 100%
+    );    
+}
+.allDi{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.divImg{
+    box-shadow: 30px 30px 30px ;
+    border: 5px solid rgb(167, 186, 186);
+    width: 35%;
+}
+.divImg img{
+    width: 100%;
+    height: 100%;
+}
+.filmPage h2{
+    font-size: 50px !important;
+    color: rgb(9, 9, 47) !important;
+}
+.filmPage p{
+    font-size: 20px !important;
+    color: rgb(12, 12, 50) !important;
+    width: 60%;
+}
+.filmPage p span{
+    font-size: 20px !important;
+    color: #f4b35d;
+    width: 60%;
+}
+
+@media (max-width: 576px) {
+    .allDi{
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    .divImg{
+    margin: 0 auto;
+    }
+    .divImg img{
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+        padding-left: 20px;
+    }
+      }
+      

@@ -12,6 +12,7 @@ import '../css/navBar.css'
 import { Form, Offcanvas } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { deleteMovie } from '../store/authSlice';
+import { Link } from 'react-router-dom';
 const NavBar = ({ handleChange, moviesInList, setMoviesListed }) => {
     const dispatch = useDispatch();
     const [show, setShow] = useState(false);
@@ -26,15 +27,16 @@ const NavBar = ({ handleChange, moviesInList, setMoviesListed }) => {
         const updatedMovies = moviesInList.filter((movie) => movie.moviesInList.id !== mov.id)
         dispatch(deleteMovie(updatedMovies))
     }
+
     return (
-        <section>
-            <Container>
-                <Navbar expand="lg" id='home'>
-                    <Navbar.Brand href="#home" style={{ color: 'white' }}><BiSolidMoviePlay className='me-2 fs-3 c-white' />Movies Box</Navbar.Brand>
+        <section className='sec3'>
+            <Container className='containerNav'>
+                <Navbar expand="lg" id='home' >
+                    <Navbar.Brand href="/" style={{ color: 'white' }}><BiSolidMoviePlay className='me-2 fs-3 c-white' />Movies Box</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-white' />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto" >
-                            <Nav.Link href="#home" className='ps-5 text-white'>Home</Nav.Link>
+                            <Link to={'/'}><Nav.Link href="#home" className='ps-5 text-white'>Home</Nav.Link></Link>
                             <Nav.Link href="#movies" className='ps-5 text-white'>Movies</Nav.Link>
                             <Nav.Link href="#popular" className='ps-5 text-white'>New & Popular</Nav.Link>
                             <Nav.Link className='ps-5 text-white' onClick={handleShow}>My List</Nav.Link>
