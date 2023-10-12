@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar handleChange={handleChange} moviesInList={moviesInList} setMoviesListed={setMoviesListed} />
+        <NavBar handleChange={handleChange} moviesInList={moviesInList} setMoviesListed={setMoviesListed} setSelectedMovie={setSelectedMovie}/>
         <Routes>
           <Route path="/" element={<Section1 movies={movies} query={query} setSelectedMovie={setSelectedMovie}/>} />
           <Route path="/film/:id" element={<FilmPage selectedMovie={selectedMovie}/>} />

@@ -12,12 +12,17 @@ import '../css/navBar.css'
 import { Form, Offcanvas } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { deleteMovie } from '../store/authSlice';
-import { Link } from 'react-router-dom';
-const NavBar = ({ handleChange, moviesInList, setMoviesListed }) => {
+import { Link, useNavigate } from 'react-router-dom';
+const NavBar = ({ handleChange, moviesInList, setMoviesListed, setSelectedMovie }) => {
+    const navigate = useNavigate()
     const dispatch = useDispatch();
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const handleShowing = (movie) => {
+        setSelectedMovie(movie?.moviesInList);
+        navigate(`/film/${movie.moviesInList?.id}`);
+    };
     useEffect(() => {
         if (moviesInList) {
             setMoviesListed(moviesInList);
@@ -47,13 +52,13 @@ const NavBar = ({ handleChange, moviesInList, setMoviesListed }) => {
                                             <div key={movie.moviesInList.id} >
                                                 <p className='text-center pt-5'>{movie.moviesInList.title}</p>
                                                 <AiFillDelete size={25} className='deleteIcon' onClick={() => handleDeleted(movie.moviesInList)} />
-                                                <div className='baba'>
+                                                <div className='position-relative'>
                                                     <img
                                                         alt='img'
                                                         className='imgCanvas'
                                                         src={`http://www.themoviedb.org/t/p/w220_and_h330_face${movie.moviesInList.poster_path}`}
                                                     />
-                                                    <AiFillPlayCircle className='overlay-playIcon' />
+                                                    <AiFillPlayCircle className='overlay-playIcon' onClick={() => handleShowing(movie)} />
                                                 </div>
                                             </div>
                                         ))}</Offcanvas.Title>
