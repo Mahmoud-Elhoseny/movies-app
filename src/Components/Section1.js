@@ -22,7 +22,7 @@ const Section1 = ({ movies, query, setSelectedMovie }) => {
   const [iconTrans, setIconTrans] = useState({});
   const handleShow = (mov) => {
     setSelectedMovie(mov);
-    navigate(`/film/${mov.id}`);
+    navigate(`/film/${mov?.id}`);
   };
   const handleClick = (movie) => {
     const movId = movie.id
@@ -51,25 +51,25 @@ const Section1 = ({ movies, query, setSelectedMovie }) => {
         return movies
       }
     })?.map((mov) => (
-      <Col className='center' key={mov.id} xs={12} sm={6} md={6} lg={4} xl={3}>
+      <Col className='center' key={mov?.id} xs={12} sm={6} md={6} lg={4} xl={3}>
         <Card style={{ width: '18rem' }} className='cart mb-3'>
-          <Card.Img variant="top" src={`http://www.themoviedb.org/t/p/w220_and_h330_face${mov.poster_path}`} />
+          <Card.Img variant="top" src={`http://www.themoviedb.org/t/p/w220_and_h330_face${mov?.poster_path}`} />
           <div className='text-center '>
-            <h3 className='titlesize'>{mov.title}</h3>
-            <span className='fw-bold p-2'>{mov.release_date}</span>
+            <h3 className='titlesize'>{mov?.title}</h3>
+            <span className='fw-bold p-2'>{mov?.release_date}</span>
           </div>
           <div className='text-center fw-bold'>
             <p className='hdSpan'>HD</p>
             <div className='d-flex justify-content-between px-3 pb-2'>
               <span>90min<BiSolidTime color='#f4b35d' /></span>
-              <span> {mov.vote_count}<AiFillStar color='#f4b35d' /></span>
+              <span> {mov?.vote_count}<AiFillStar color='#f4b35d' /></span>
             </div>
           </div>
           {
-            iconTrans[mov.id] ? (<span className='overlay-icon'><MdOutlineDoneOutline /></span>) :
+            iconTrans[mov?.id] ? (<span className='overlay-icon'><MdOutlineDoneOutline /></span>) :
               <span className='overlay-icon'><IoAddOutline onClick={() => handleClick(mov)} /></span>
           }
-          <span className="overlay-text">{mov.overview}</span>
+          <span className="overlay-text">{mov?.overview}</span>
           <button onClick={() => handleShow(mov)} className='overlay-button' type=""><AiFillPlayCircle className='watchIcon' color='#f4b35d' size={25} /> Watch now</button>
         </Card>
       </Col>
@@ -125,7 +125,7 @@ const Section2 = ({ movies, query, setSelectedMovie }) => {
 
   const handleShow = (mov) => {
     setSelectedMovie(mov);
-    navigate(`/film/${mov.id}`);
+    navigate(`/film/${mov?.id}`);
   };
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -154,25 +154,25 @@ const Section2 = ({ movies, query, setSelectedMovie }) => {
         return movies
       }
     })?.map((mov) => (
-      <Col className='center' key={mov.id} xs={12} sm={6} md={6} lg={4} xl={3}>
+      <Col className='center' key={mov?.id} xs={12} sm={6} md={6} lg={4} xl={3}>
         <Card style={{ width: '18rem' }} className='cart mb-3'>
-          <Card.Img variant="top" src={`http://www.themoviedb.org/t/p/w220_and_h330_face${mov.poster_path}`} />
+          <Card.Img variant="top" src={`http://www.themoviedb.org/t/p/w220_and_h330_face${mov?.poster_path}`} />
           <div className='text-center'>
-            <h3 className='titlesize'>{mov.title}</h3>
-            <span className='fw-bold p-2'>{mov.release_date}</span>
+            <h3 className='titlesize'>{mov?.title}</h3>
+            <span className='fw-bold p-2'>{mov?.release_date}</span>
           </div>
           <div className='text-center fw-bold'>
             <p className='hdSpan'>HD</p>
             <div className='d-flex justify-content-between px-3 pb-2'>
               <span>90min<BiSolidTime color='#f4b35d' /></span>
-              <span> {mov.vote_count}<AiFillStar color='#f4b35d' /></span>
+              <span> {mov?.vote_count}<AiFillStar color='#f4b35d' /></span>
             </div>
           </div>
           {
-            iconTrans[mov.id] ? (<span className='overlay-icon'><MdOutlineDoneOutline /></span>) :
+            iconTrans[mov?.id] ? (<span className='overlay-icon'><MdOutlineDoneOutline /></span>) :
               <span className='overlay-icon'><IoAddOutline onClick={() => handleClick(mov)} /></span>
           }
-          <span className="overlay-text">{mov.overview}</span>
+          <span className="overlay-text">{mov?.overview}</span>
           <button onClick={() => handleShow(mov)} className='overlay-button' type=""><AiFillPlayCircle className='watchIcon' color='#f4b35d' size={25} /> Watch now</button>
         </Card>
       </Col>
