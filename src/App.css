@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden ;;
+}
 .App {
   text-align: center;
 }
@@ -5,6 +8,11 @@
 @media (max-width: 576px) {
   .containerNav{
     background: #614949;
+  }
+  }
+@media (max-width: 768px) {
+  .sec3{
+    background-size: 177%;
   }
   }
 
